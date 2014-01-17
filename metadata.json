@@ -1,0 +1,16 @@
+{
+  "description": "Puppet module to install ZEND Guard Loader, ZEND Optimizer or IonCube Loader for PHP.",
+  "summary": "UNKNOWN",
+  "source": "UNKNOWN",
+  "version": "1.0.0",
+  "author": "Jankowfsky AG - Alexander Schneider",
+  "dependencies": [
+
+  ],
+  "types": [
+
+  ],
+  "project_page": "https://github.com/GM-Alex/puppet-phpdecoder",
+  "license": "Apache License, Version 2.0",
+  "name": "puppet-phpdecoder"
+}
