@@ -31,8 +31,8 @@ define phpdecoder::install (
     file { "${modules_dir}${decoder_type}-php-${short_php_version}.so":
       ensure    => present,
       source    => "puppet:///modules/phpdecoder/${decoder_type}-php-${short_php_version}.so",
-      subscribe => File["${modules_dir}"]
-    }
+      subscribe => File["${modules_dir}"],
+      mode      => 755,
   }
 
   if ! defined(File["${php_ini_dir}${ini_file}"]) {
@@ -40,7 +40,7 @@ define phpdecoder::install (
       ensure    => present,
       content   => template("phpdecoder/${ini_file}.erb"),
       subscribe => File["${modules_dir}${decoder_type}-php-${short_php_version}.so"],
-      notify    => Service['httpd']
+      notify    => Service['httpd'],
     }
   }
 }
